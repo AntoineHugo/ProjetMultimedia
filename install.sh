@@ -1,6 +1,7 @@
 #!/bin/bash
 #Possibilité de lancer le script avec la commande :
-#sudo wget -O - https://raw.githubusercontent.com/AntoineHugo/ProjetMultimedia/main/install.sh | sudo bash
+#sudo wget -O - https://raw.githubusercontent.com/AntoineHugo/ProjetMultimedia/5682924dc658452d378ff8a74998ca31205808e8/install.sh | sudo bash
+
 
 GREEN='\033[0;32m'
 NORMAL='\033[0m' # No Color
@@ -522,7 +523,7 @@ echo ""
 echo ""
 echo -e "${GREEN}${BOLD}Le script s'est terminé.${NORMAL}"
 echo ""
-echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des films et"${NORMAL} ${BOLD}"sonarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des séries (les mots de passes à utiliser : user :${NORMAL} ${BOLD}administration ${GREEN}${BOLD}/ mot de passe :${NORMAL} ${BOLD}passroot${NORMAL}"
+echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des films et"${NORMAL} ${BOLD}"sonarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des séries (les mots de passes à utiliser : user :${NORMAL} ${BOLD}administration ${GREEN}${BOLD}/ mot de passe :${NORMAL} ${BOLD}passroot)${NORMAL}"
 echo ""
 echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"grafana.projet-multimedia.com" ${GREEN}${BOLD}pour superviser l\'environnement et"${NORMAL} ${BOLD}"portainer.projet-multimedia.com" ${GREEN}${BOLD}pour relancer des services. ${NORMAL}"
 echo ""
