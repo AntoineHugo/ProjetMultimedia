@@ -109,8 +109,6 @@ services:
       - "traefik.http.routers.radarr.rule=Host(`radarr.projet-multimedia.com`)"
       - "traefik.http.routers.radarr.tls=true"
       - "traefik.http.services.radarr.loadbalancer.server.port=7878"
-    extra_hosts:
-      - "radarr.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped 
 
 
@@ -143,8 +141,6 @@ services:
       - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.projet-multimedia.com`)"
       - "traefik.http.routers.jellyfin.tls=true"
       - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
-    extra_hosts:
-      - "jellyfin.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped   
 
 
@@ -177,8 +173,6 @@ services:
       - "traefik.http.routers.sonarr.rule=Host(`sonarr.projet-multimedia.com`)"
       - "traefik.http.routers.sonarr.tls=true"
       - "traefik.http.services.sonarr.loadbalancer.server.port=8989"
-    extra_hosts:
-      - "sonarr.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
 
 
@@ -210,8 +204,6 @@ services:
       - "traefik.http.routers.jackett.rule=Host(`jackett.projet-multimedia.com`)"
       - "traefik.http.routers.jackett.tls=true"
       - "traefik.http.services.jackett.loadbalancer.server.port=9117"
-    extra_hosts:
-      - "jackett.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
 
 
@@ -247,8 +239,6 @@ services:
       - "traefik.http.routers.transmission.rule=Host(`transmission.projet-multimedia.com`)"
       - "traefik.http.routers.transmission.tls=true"
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
-    extra_hosts:
-      - "transmission.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
 
 
@@ -281,8 +271,6 @@ services:
       - "traefik.http.routers.bazarr.rule=Host(`bazarr.projet-multimedia.com`)"
       - "traefik.http.routers.bazarr.tls=true"
       - "traefik.http.services.bazarr.loadbalancer.server.port=6767"
-    extra_hosts:
-      - "bazarr.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
 
 
@@ -315,8 +303,6 @@ services:
       - "traefik.http.routers.organizr.rule=Host(`organizr.projet-multimedia.com`)"
       - "traefik.http.routers.organizr.tls=true"
       - "traefik.http.services.organizr.loadbalancer.server.port=80"
-    extra_hosts:
-      - "organizr.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
 
 
@@ -349,8 +335,6 @@ services:
       - "traefik.http.routers.nzbhydra2.rule=Host(`nzbhydra2.projet-multimedia.com`)"
       - "traefik.http.routers.nzbhydra2.tls=true"
       - "traefik.http.services.nzbhydra2.loadbalancer.server.port=5076"
-    extra_hosts:
-      - "nzbhydra2.projet-multimedia.com:192.168.5.12"
     restart: unless-stopped
     
 
@@ -382,8 +366,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/docker/portainer/data:/data
-    extra_hosts:
-      - "portainer.projet-multimedia.com:192.168.5.12"
 
       
 ####
@@ -432,8 +414,6 @@ services:
     - "traefik.http.routers.api.tls.certresolver=projet-multimedia"
     - "traefik.http.routers.api.middlewares=auth"
     - "traefik.http.middlewares.auth.basicauth.users=administrateur:$$apr1$$SgawlZIX$$UAWNdBNHwQwKT5a3NW7cO."
-    extra_hosts:
-      - "traefik.projet-multimedia.com:192.168.5.12"
 
 ####
 #Cadvisor
@@ -461,8 +441,6 @@ services:
       - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.projet-multimedia.com`)"
       - "traefik.http.routers.cadvisor.tls=true"
       - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
-    extra_hosts:
-      - "cadvisor.projet-multimedia.com:192.168.5.12"
 
 
 ####
@@ -496,8 +474,6 @@ services:
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.projet-multimedia.com`)"
       - "traefik.http.routers.prometheus.tls=true"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
-    extra_hosts:
-      - "prometheus.projet-multimedia.com:192.168.5.12"
 	  
 ####
 #Grafana
@@ -523,8 +499,7 @@ services:
       - "traefik.http.routers.grafana.rule=Host(`grafana.projet-multimedia.com`)"
       - "traefik.http.routers.grafana.tls=true"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
-    extra_hosts:
-      - "grafana.projet-multimedia.com:192.168.5.12"
+
 EOF
 
 #Lancement du docker-compose
