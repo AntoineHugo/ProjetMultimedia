@@ -67,7 +67,7 @@ services:
   flaresolverr:
     # depends_on:
     #   - watchtower 
-    image: flaresolverr/flaresolverr:latest
+    image: flaresolverr:latest
     container_name: flaresolverr
     environment:
       - LOG_LEVEL=info
@@ -437,7 +437,7 @@ services:
       # - watchtower
       - traefik 
       - cadvisor
-    image: prom/prometheus:v2.0.0
+    image: prometheus:v2.0.0
     container_name: prometheus
     volumes:
       - /opt/docker/prometheus:/etc/prometheus/
