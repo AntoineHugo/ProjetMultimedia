@@ -101,11 +101,11 @@ services:
       - 7878
     labels:
       - "traefik.http.routers.radarr-http.entrypoints=web"
-      - "traefik.http.routers.radarr-http.rule=Host(`radarr.projet-multimedia.com`)"
+      - "traefik.http.routers.radarr-http.rule=Host(`\radarr.projet-multimedia.com\`)"
       - "traefik.http.routers.radarr-http.middlewares=radarr-https"
       - "traefik.http.middlewares.radarr-https.redirectscheme.scheme=https"
       - "traefik.http.routers.radarr.entrypoints=websecure"
-      - "traefik.http.routers.radarr.rule=Host(`radarr.projet-multimedia.com`)"
+      - "traefik.http.routers.radarr.rule=Host(\`radarr.projet-multimedia.com\`)"
       - "traefik.http.services.radarr.loadbalancer.server.port=7878"
       - "traefik.http.routers.radarr.tls=true"
     restart: unless-stopped 
@@ -132,11 +132,11 @@ services:
       - 8096
     labels:
       - "traefik.http.routers.jellyfin-http.entrypoints=web"
-      - "traefik.http.routers.jellyfin-http.rule=Host(`jellyfin.projet-multimedia.com`)"
+      - "traefik.http.routers.jellyfin-http.rule=Host(\`jellyfin.projet-multimedia.com\`)"
       - "traefik.http.routers.jellyfin-http.middlewares=jellyfin-https"
       - "traefik.http.middlewares.jellyfin-https.redirectscheme.scheme=https"
       - "traefik.http.routers.jellyfin.entrypoints=websecure"
-      - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.projet-multimedia.com`)"
+      - "traefik.http.routers.jellyfin.rule=Host(\`jellyfin.projet-multimedia.com\`)"
       - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
       - "traefik.http.routers.jellyfin.tls=true"
     restart: unless-stopped   
@@ -163,11 +163,11 @@ services:
       - 8989
     labels:
       - "traefik.http.routers.sonarr-http.entrypoints=web"
-      - "traefik.http.routers.sonarr-http.rule=Host(`sonarr.projet-multimedia.com`)"
+      - "traefik.http.routers.sonarr-http.rule=Host(\`sonarr.projet-multimedia.com\`)"
       - "traefik.http.routers.sonarr-http.middlewares=sonarr-https"
       - "traefik.http.middlewares.sonarr-https.redirectscheme.scheme=https"
       - "traefik.http.routers.sonarr.entrypoints=websecure"
-      - "traefik.http.routers.sonarr.rule=Host(`sonarr.projet-multimedia.com`)"
+      - "traefik.http.routers.sonarr.rule=Host(\`sonarr.projet-multimedia.com\`)"
       - "traefik.http.services.sonarr.loadbalancer.server.port=8989"
       - "traefik.http.routers.sonarr.tls=true"
     restart: unless-stopped
@@ -193,11 +193,11 @@ services:
       - 9117
     labels:
       - "traefik.http.routers.jackett-http.entrypoints=web"
-      - "traefik.http.routers.jackett-http.rule=Host(`jackett.projet-multimedia.com`)"
+      - "traefik.http.routers.jackett-http.rule=Host(\`jackett.projet-multimedia.com\`)"
       - "traefik.http.routers.jackett-http.middlewares=jackett-https"
       - "traefik.http.middlewares.jackett-https.redirectscheme.scheme=https"
       - "traefik.http.routers.jackett.entrypoints=websecure"
-      - "traefik.http.routers.jackett.rule=Host(`jackett.projet-multimedia.com`)"
+      - "traefik.http.routers.jackett.rule=Host(\`jackett.projet-multimedia.com\`)"
       - "traefik.http.services.jackett.loadbalancer.server.port=9117"
       - "traefik.http.routers.jackett.tls=true"
     restart: unless-stopped
@@ -227,11 +227,11 @@ services:
       - 51413
     labels:
       - "traefik.http.routers.transmission-http.entrypoints=web"
-      - "traefik.http.routers.transmission-http.rule=Host(`transmission.projet-multimedia.com`)"
+      - "traefik.http.routers.transmission-http.rule=Host(\`transmission.projet-multimedia.com\`)"
       - "traefik.http.routers.transmission-http.middlewares=transmission-https"
       - "traefik.http.middlewares.transmission-https.redirectscheme.scheme=https"
       - "traefik.http.routers.transmission.entrypoints=websecure"
-      - "traefik.http.routers.transmission.rule=Host(`transmission.projet-multimedia.com`)"
+      - "traefik.http.routers.transmission.rule=Host(\`transmission.projet-multimedia.com\`)"
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
       - "traefik.http.routers.transmission.tls=true"
     restart: unless-stopped
@@ -258,11 +258,11 @@ services:
       - 6767
     labels:
       - "traefik.http.routers.bazarr-http.entrypoints=web"
-      - "traefik.http.routers.bazarr-http.rule=Host(`bazarr.projet-multimedia.com`)"
+      - "traefik.http.routers.bazarr-http.rule=Host(\`bazarr.projet-multimedia.com\`)"
       - "traefik.http.routers.bazarr-http.middlewares=bazarr-https"
       - "traefik.http.middlewares.bazarr-https.redirectscheme.scheme=https"
       - "traefik.http.routers.bazarr.entrypoints=websecure"
-      - "traefik.http.routers.bazarr.rule=Host(`bazarr.projet-multimedia.com`)"
+      - "traefik.http.routers.bazarr.rule=Host(\`bazarr.projet-multimedia.com\`)"
       - "traefik.http.services.bazarr.loadbalancer.server.port=6767"
       - "traefik.http.routers.bazarr.tls=true"
     restart: unless-stopped
@@ -289,11 +289,11 @@ services:
       - 80
     labels:
       - "traefik.http.routers.organizr-http.entrypoints=web"
-      - "traefik.http.routers.organizr-http.rule=Host(`organizr.projet-multimedia.com`)"
+      - "traefik.http.routers.organizr-http.rule=Host(\`organizr.projet-multimedia.com\`)"
       - "traefik.http.routers.organizr-http.middlewares=organizr-https"
       - "traefik.http.middlewares.organizr-https.redirectscheme.scheme=https"
       - "traefik.http.routers.organizr.entrypoints=websecure"
-      - "traefik.http.routers.organizr.rule=Host(`organizr.projet-multimedia.com`)"
+      - "traefik.http.routers.organizr.rule=Host(\`organizr.projet-multimedia.com\`)"
       - "traefik.http.services.organizr.loadbalancer.server.port=80"
       - "traefik.http.routers.organizr.tls=true"
     restart: unless-stopped
@@ -319,11 +319,11 @@ services:
       - 5076
     labels:
       - "traefik.http.routers.nzbhydra2-http.entrypoints=web"
-      - "traefik.http.routers.nzbhydra2-http.rule=Host(`nzbhydra.projet-multimedia.com`)"
+      - "traefik.http.routers.nzbhydra2-http.rule=Host(\`nzbhydra.projet-multimedia.com\`)"
       - "traefik.http.routers.nzbhydra2-http.middlewares=nzbhydra2-https"
       - "traefik.http.middlewares.nzbhydra2-https.redirectscheme.scheme=https"
       - "traefik.http.routers.nzbhydra2.entrypoints=websecure"
-      - "traefik.http.routers.nzbhydra2.rule=Host(`nzbhydra.projet-multimedia.com`)"
+      - "traefik.http.routers.nzbhydra2.rule=Host(\`nzbhydra.projet-multimedia.com\`)"
       - "traefik.http.services.nzbhydra2.loadbalancer.server.port=5076"
       - "traefik.http.routers.nzbhydra2.tls=true"
     restart: unless-stopped
@@ -346,11 +346,11 @@ services:
       - 8000
     labels:
       - "traefik.http.routers.portainer-http.entrypoints=web"
-      - "traefik.http.routers.portainer-http.rule=Host(`portainer.projet-multimedia.com`)"
+      - "traefik.http.routers.portainer-http.rule=Host(\`portainer.projet-multimedia.com\`)"
       - "traefik.http.routers.portainer-http.middlewares=portainer-https"
       - "traefik.http.middlewares.portainer-https.redirectscheme.scheme=https"
       - "traefik.http.routers.portainer.entrypoints=websecure"
-      - "traefik.http.routers.portainer.rule=Host(`portainer.projet-multimedia.com`)"
+      - "traefik.http.routers.portainer.rule=Host(\`portainer.projet-multimedia.com\`)"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
       - "traefik.http.routers.portainer.tls=true"
     volumes:
@@ -420,11 +420,11 @@ services:
       - 8080
     labels:
       - "traefik.http.routers.cadvisor-http.entrypoints=web"
-      - "traefik.http.routers.cadvisor-http.rule=Host(`cadvisor.projet-multimedia.com`)"
+      - "traefik.http.routers.cadvisor-http.rule=Host(\`cadvisor.projet-multimedia.com\`)"
       - "traefik.http.routers.cadvisor-http.middlewares=cadvisor-https"
       - "traefik.http.middlewares.cadvisor-https.redirectscheme.scheme=https"
       - "traefik.http.routers.cadvisor.entrypoints=websecure"
-      - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.projet-multimedia.com`)"
+      - "traefik.http.routers.cadvisor.rule=Host(\`cadvisor.projet-multimedia.com\`)"
       - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
       - "traefik.http.routers.cadvisor.tls=true"
 
@@ -452,11 +452,11 @@ services:
       - 9090
     labels:
       - "traefik.http.routers.prometheus-http.entrypoints=web"
-      - "traefik.http.routers.prometheus-http.rule=Host(`prometheus.projet-multimedia.com`)"
+      - "traefik.http.routers.prometheus-http.rule=Host(\`prometheus.projet-multimedia.com\`)"
       - "traefik.http.routers.prometheus-http.middlewares=prometheus-https"
       - "traefik.http.middlewares.prometheus-https.redirectscheme.scheme=https"
       - "traefik.http.routers.prometheus.entrypoints=websecure"
-      - "traefik.http.routers.prometheus.rule=Host(`prometheus.projet-multimedia.com`)"
+      - "traefik.http.routers.prometheus.rule=Host(\`prometheus.projet-multimedia.com\`)"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
       - "traefik.http.routers.prometheus.tls=true"
 
@@ -476,11 +476,11 @@ services:
       - 3000
     labels:
       - "traefik.http.routers.grafana-http.entrypoints=web"
-      - "traefik.http.routers.grafana-http.rule=Host(`grafana.projet-multimedia.com`)"
+      - "traefik.http.routers.grafana-http.rule=Host(\`grafana.projet-multimedia.com\`)"
       - "traefik.http.routers.grafana-http.middlewares=grafana-https"
       - "traefik.http.middlewares.grafana-https.redirectscheme.scheme=https"
       - "traefik.http.routers.grafana.entrypoints=websecure"
-      - "traefik.http.routers.grafana.rule=Host(`grafana.projet-multimedia.com`)"
+      - "traefik.http.routers.grafana.rule=Host(\`grafana.projet-multimedia.com\`)"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.http.routers.grafana.tls=true"
     extra_hosts:
