@@ -105,7 +105,7 @@ services:
       - "traefik.http.routers.radarr-http.middlewares=radarr-https"
       - "traefik.http.middlewares.radarr-https.redirectscheme.scheme=https"
       - "traefik.http.routers.radarr.entrypoints=websecure"
-      - "traefik.http.routers.radarr.rule=Host(\`radarr.projet-multimedia.com\`)"
+      - "traefik.http.routers.radarr.rule=Host(`radarr.projet-multimedia.com`)"
       - "traefik.http.services.radarr.loadbalancer.server.port=7878"
       - "traefik.http.routers.radarr.tls=true"
     restart: unless-stopped 
