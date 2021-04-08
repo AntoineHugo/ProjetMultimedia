@@ -8,8 +8,8 @@ NORMAL='\033[0m' # No Color
 BOLD=$(tput bold) #Text en gras
 RED='\033[0;31m'
 ping -c 1 8.8.8.8 &> /dev/null
-alias startdocker="docker-compose -f /opt/docker/docker-compose.yml up -d"
-alias stopdocker="docker-compose -f /opt/docker/docker-compose.yml down"
+echo "alias startdocker=\"docker-compose -f /opt/docker/docker-compose.yml up -d\"" >> /etc/bash.bashrc
+echo "alias stopdocker=\"docker-compose -f /opt/docker/docker-compose.yml down\"" >> /etc/bash.bashrc
 
 #Mise en place de garde fou en fonction de l'accès réseau et check si l'user=ROOT
 if [[ $? -ne 0 ]];
@@ -93,7 +93,7 @@ echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.p
 echo ""
 echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"grafana.projet-multimedia.com" ${GREEN}${BOLD}pour superviser l\'environnement et"${NORMAL} ${BOLD}"portainer.projet-multimedia.com" ${GREEN}${BOLD}pour relancer des services. ${NORMAL}"
 echo ""
-echo -e "${GREEN}${BOLD}Pour démarrer les containers du projet lancer la commande :${NORMAL}${BICyan} startdocker${NORMAL}"
-echo -e "${GREEN}${BOLD}Pour stopper les containers du projet lancer la commande :${NORMAL}${BICyan} stopdocker${NORMAL}"
+echo -e "${GREEN}${BOLD}Pour démarrer les containers du projet lancer la commande :${NORMAL}${BICyan} startdocker (il faut refresh le terminal)${NORMAL}"
+echo -e "${GREEN}${BOLD}Pour stopper les containers du projet lancer la commande :${NORMAL}${BICyan} stopdocker (il faut refresh le terminal)${NORMAL}"
 
 fi
