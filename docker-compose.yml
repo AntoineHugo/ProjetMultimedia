@@ -1,7 +1,7 @@
 version: "2.1"
 services:
 
-  
+
 ####
 #FlareSolverr
 ####
@@ -307,16 +307,16 @@ services:
 # ####
 # #Watchtower
 # ####
-   watchtower:
-     command: --label-enable --cleanup --interval 300
-     image: containrrr/watchtower
-     container_name: watchtower
-     labels:
-       - "com.centurylinklabs.watchtower.enable=true"
-     network_mode: none
-     restart: always
-     volumes:
-       - /var/run/docker.sock:/var/run/docker.sock
+  watchtower:
+    command: --label-enable --cleanup --interval 300
+    image: containrrr/watchtower
+    container_name: watchtower
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    network_mode: none
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 
 ####
