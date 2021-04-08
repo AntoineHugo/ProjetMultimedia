@@ -2,7 +2,7 @@
 #Possibilité de lancer le script avec la commande :
 #sudo wget -O - https://raw.githubusercontent.com/AntoineHugo/ProjetMultimedia/5682924dc658452d378ff8a74998ca31205808e8/install.sh | sudo bash
 
-BICyan="\[\033[1;96m\]"
+BICyan="\033[1;96m"
 GREEN='\033[0;32m'
 NORMAL='\033[0m' # No Color
 BOLD=$(tput bold) #Text en gras
