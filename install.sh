@@ -93,7 +93,7 @@ echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.p
 echo ""
 echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"grafana.projet-multimedia.com" ${GREEN}${BOLD}pour superviser l\'environnement et"${NORMAL} ${BOLD}"portainer.projet-multimedia.com" ${GREEN}${BOLD}pour relancer des services. ${NORMAL}"
 echo ""
-echo -e "${GREEN}${BOLD}Pour démarrer les containers du projet lancer la commande :${NORMAL}${BICyan} startdocker (il faut refresh le terminal)${NORMAL}"
-echo -e "${GREEN}${BOLD}Pour stopper les containers du projet lancer la commande :${NORMAL}${BICyan} stopdocker (il faut refresh le terminal)${NORMAL}"
+echo -e "${GREEN}${BOLD}Pour démarrer les containers du projet lancer la commande :${NORMAL}${BICyan} startdocker${NORMAL} ${GREEN}${BOLD}(il faut refresh le terminal)${NORMAL}"
+echo -e "${GREEN}${BOLD}Pour stopper les containers du projet lancer la commande :${NORMAL}${BICyan} stopdocker${NORMAL} ${GREEN}${BOLD}(il faut refresh le terminal)${NORMAL}"
 
 fi
