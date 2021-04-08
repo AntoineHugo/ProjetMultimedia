@@ -5,7 +5,7 @@ Pour lancer le projet (testé Debian10 / Ubuntu 20.04), il suffit de lancer cett
 
 ##########################################################
 
-sudo wget -O - https://raw.githubusercontent.com/AntoineHugo/ProjetMultimedia/5682924dc658452d378ff8a74998ca31205808e8/install.sh | sudo bash
+sudo wget -O - https://raw.githubusercontent.com/AntoineHugo/ProjetMultimedia/main/install.sh | sudo bash
 
 ##########################################################
 
