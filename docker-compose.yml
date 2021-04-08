@@ -8,7 +8,7 @@ services:
   flaresolverr:
     depends_on:
       - watchtower 
-    image: flaresolverr:latest
+    image: flaresolverr/flaresolverr
     container_name: flaresolverr
     environment:
       - LOG_LEVEL=info
