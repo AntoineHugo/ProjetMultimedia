@@ -325,7 +325,7 @@ services:
   traefik:
     depends_on:
       - watchtower
-    image: traefik:v2.2
+    image: traefik/traefik:v2.2
     container_name: traefik
     command:
       - "--providers.docker"
@@ -347,6 +347,8 @@ services:
     - "traefik.http.routers.api.tls.certresolver=projet-multimedia"
     - "traefik.http.routers.api.middlewares=auth"
     - "traefik.http.middlewares.auth.basicauth.users=administrateur:1357apr11357SgawlZIX1357UAWNdBNHwQwKT5a3NW7cO."
+    
+    
 ####
 #Cadvisor
 ####
@@ -383,7 +385,7 @@ services:
       - watchtower
       - traefik 
       - cadvisor
-    image: prometheus:v2.0.0
+    image: prometheus/prometheus:v2.0.0
     container_name: prometheus
     volumes:
       - /opt/docker/prometheus:/etc/prometheus/
