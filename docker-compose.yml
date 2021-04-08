@@ -1,11 +1,13 @@
 version: "2.1"
 services:
+
+
 ####
 #FlareSolverr
 ####
   flaresolverr:
-    # depends_on:
-    #   - watchtower
+    depends_on:
+      - watchtower
     image: flaresolverr/flaresolverr:latest
     container_name: flaresolverr
     environment:
@@ -17,12 +19,14 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     restart: unless-stopped
+
+
 ####
 #Radarr
 ####
   radarr:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/radarr
     container_name: radarr
@@ -37,6 +41,7 @@ services:
     expose:
       - 7878
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.radarr-http.entrypoints=web"
       - "traefik.http.routers.radarr-http.rule=Host(`radarr.projet-multimedia.com`)"
       - "traefik.http.routers.radarr-http.middlewares=radarr-https"
@@ -46,12 +51,14 @@ services:
       - "traefik.http.services.radarr.loadbalancer.server.port=7878"
       - "traefik.http.routers.radarr.tls=true"
     restart: unless-stopped
+
+
 ####
 #Jellyfin
 ####
   jellyfin:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/jellyfin
     container_name: jellyfin
@@ -66,6 +73,7 @@ services:
     expose:
       - 8096
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.jellyfin-http.entrypoints=web"
       - "traefik.http.routers.jellyfin-http.rule=Host(`jellyfin.projet-multimedia.com`)"
       - "traefik.http.routers.jellyfin-http.middlewares=jellyfin-https"
@@ -75,12 +83,14 @@ services:
       - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
       - "traefik.http.routers.jellyfin.tls=true"
     restart: unless-stopped
+
+
 ####
 #Sonarr
 ####
   sonarr:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/sonarr
     container_name: sonarr
@@ -95,6 +105,7 @@ services:
     expose:
       - 8989
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.sonarr-http.entrypoints=web"
       - "traefik.http.routers.sonarr-http.rule=Host(`sonarr.projet-multimedia.com`)"
       - "traefik.http.routers.sonarr-http.middlewares=sonarr-https"
@@ -104,12 +115,14 @@ services:
       - "traefik.http.services.sonarr.loadbalancer.server.port=8989"
       - "traefik.http.routers.sonarr.tls=true"
     restart: unless-stopped
+
+
 ####
 #Jackett
 ####
   jackett:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/jackett
     container_name: jackett
@@ -123,6 +136,7 @@ services:
     expose:
       - 9117
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.jackett-http.entrypoints=web"
       - "traefik.http.routers.jackett-http.rule=Host(`jackett.projet-multimedia.com`)"
       - "traefik.http.routers.jackett-http.middlewares=jackett-https"
@@ -132,12 +146,14 @@ services:
       - "traefik.http.services.jackett.loadbalancer.server.port=9117"
       - "traefik.http.routers.jackett.tls=true"
     restart: unless-stopped
+
+
 ####
 #Transmission
 ####
   transmission:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/transmission
     container_name: transmission
@@ -155,6 +171,7 @@ services:
       - 9091
       - 51413
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.transmission-http.entrypoints=web"
       - "traefik.http.routers.transmission-http.rule=Host(`transmission.projet-multimedia.com`)"
       - "traefik.http.routers.transmission-http.middlewares=transmission-https"
@@ -164,12 +181,14 @@ services:
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
       - "traefik.http.routers.transmission.tls=true"
     restart: unless-stopped
+
+
 ####
 #Bazzar
 ####
   bazarr:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/bazarr
     container_name: bazarr
@@ -184,6 +203,7 @@ services:
     expose:
       - 6767
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.bazarr-http.entrypoints=web"
       - "traefik.http.routers.bazarr-http.rule=Host(`bazarr.projet-multimedia.com`)"
       - "traefik.http.routers.bazarr-http.middlewares=bazarr-https"
@@ -193,12 +213,14 @@ services:
       - "traefik.http.services.bazarr.loadbalancer.server.port=6767"
       - "traefik.http.routers.bazarr.tls=true"
     restart: unless-stopped
+
+
 ####
 #Organizr
 ####
   organizr:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/organizr
     container_name: organizr
@@ -212,6 +234,7 @@ services:
     expose:
       - 80
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.organizr-http.entrypoints=web"
       - "traefik.http.routers.organizr-http.rule=Host(`organizr.projet-multimedia.com`)"
       - "traefik.http.routers.organizr-http.middlewares=organizr-https"
@@ -221,12 +244,14 @@ services:
       - "traefik.http.services.organizr.loadbalancer.server.port=80"
       - "traefik.http.routers.organizr.tls=true"
     restart: unless-stopped
+
+
 ####
 #Nzbhydra2
 ####
   nzbhydra2:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: linuxserver/nzbhydra2
     container_name: nzbhydra2
@@ -240,6 +265,7 @@ services:
     expose:
       - 5076
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.nzbhydra2-http.entrypoints=web"
       - "traefik.http.routers.nzbhydra2-http.rule=Host(`nzbhydra.projet-multimedia.com`)"
       - "traefik.http.routers.nzbhydra2-http.middlewares=nzbhydra2-https"
@@ -250,12 +276,13 @@ services:
       - "traefik.http.routers.nzbhydra2.tls=true"
     restart: unless-stopped
 
+
 ####
 #Portainer
 ####
   portainer:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: portainer/portainer
     container_name: portainer
@@ -265,6 +292,7 @@ services:
       - 9000
       - 8000
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.portainer-http.entrypoints=web"
       - "traefik.http.routers.portainer-http.rule=Host(`portainer.projet-multimedia.com`)"
       - "traefik.http.routers.portainer-http.middlewares=portainer-https"
@@ -277,25 +305,27 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/docker/portainer/data:/data
 
-# ####
-# #Watchtower
-# ####
-#   watchtower:
-#     command: --label-enable --cleanup --interval 300
-#     image: containrrr/watchtower
-#     container_name: watchtower
-#     labels:
-#       - "com.centurylinklabs.watchtower.enable=true"
-#     network_mode: none
-#     restart: always
-#     volumes:
-#       - /var/run/docker.sock:/var/run/docker.sock
+####
+#Watchtower
+####
+  watchtower:
+    command: --label-enable --cleanup --interval 300
+    image: containrrr/watchtower
+    container_name: watchtower
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    network_mode: none
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+
 ####
 #Traefik
 ####
   traefik:
-    # depends_on:
-      # - watchtower
+    depends_on:
+      - watchtower
     image: traefik:v2.2
     container_name: traefik
     command:
@@ -310,7 +340,7 @@ services:
       # - /opt/docker/traefik:/etc/traefik
       # - /opt/docker/traefik:/acme.json
     labels:
-    # - "com.centurylinklabs.watchtower.enable=true"
+    - "com.centurylinklabs.watchtower.enable=true"
     - "traefik.http.routers.api.rule=Host()"
     - "traefik.http.routers.api.service=api@internal"
     - "traefik.http.routers.api.entrypoints=websecure"
@@ -318,12 +348,14 @@ services:
     - "traefik.http.routers.api.tls.certresolver=projet-multimedia"
     - "traefik.http.routers.api.middlewares=auth"
     - "traefik.http.middlewares.auth.basicauth.users=administrateur:1357apr11357SgawlZIX1357UAWNdBNHwQwKT5a3NW7cO."
+
+
 ####
 #Cadvisor
 ####
   cadvisor:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
     image: google/cadvisor
     container_name: cadvisor
@@ -335,6 +367,7 @@ services:
     expose:
       - 8080
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.cadvisor-http.entrypoints=web"
       - "traefik.http.routers.cadvisor-http.rule=Host(`cadvisor.projet-multimedia.com`)"
       - "traefik.http.routers.cadvisor-http.middlewares=cadvisor-https"
@@ -343,12 +376,14 @@ services:
       - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.projet-multimedia.com`)"
       - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
       - "traefik.http.routers.cadvisor.tls=true"
+
+
 ####
 #Prometheus
 ####
   prometheus:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
       - cadvisor
     image: prom/prometheus:v2.0.0
@@ -365,6 +400,7 @@ services:
     expose:
       - 9090
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.prometheus-http.entrypoints=web"
       - "traefik.http.routers.prometheus-http.rule=Host(`prometheus.projet-multimedia.com`)"
       - "traefik.http.routers.prometheus-http.middlewares=prometheus-https"
@@ -373,12 +409,14 @@ services:
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.projet-multimedia.com`)"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
       - "traefik.http.routers.prometheus.tls=true"
+
+
 ####
 #Grafana
 ####
   grafana:
     depends_on:
-      # - watchtower
+      - watchtower
       - traefik
       - cadvisor
     image: grafana/grafana
@@ -388,6 +426,7 @@ services:
     expose:
       - 3000
     labels:
+      - "com.centurylinklabs.watchtower.enable=true"
       - "traefik.http.routers.grafana-http.entrypoints=web"
       - "traefik.http.routers.grafana-http.rule=Host(`grafana.projet-multimedia.com`)"
       - "traefik.http.routers.grafana-http.middlewares=grafana-https"
