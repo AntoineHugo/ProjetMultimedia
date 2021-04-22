@@ -89,7 +89,7 @@ echo ""
 head -n 13 /etc/hosts
 echo ""
 echo ""
-echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des films et"${NORMAL} ${BOLD}"sonarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des séries (les mots de passes à utiliser --> user :${NORMAL} ${BOLD}administration ${GREEN}${BOLD}/ mot de passe :${NORMAL} ${BOLD}passroot)${NORMAL}"
+echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"radarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des films et"${NORMAL} ${BOLD}"sonarr.projet-multimedia.com" ${GREEN}${BOLD}pour télécharger des séries (les mots de passes à utiliser --> user :${NORMAL} ${BOLD}administrateur ${GREEN}${BOLD}/ mot de passe :${NORMAL} ${BOLD}passroot)${NORMAL}"
 echo ""
 echo -e "${GREEN}${BOLD}Vous pouvez accéder à l'URL"${NORMAL} ${BOLD}"grafana.projet-multimedia.com" ${GREEN}${BOLD}pour superviser l\'environnement et"${NORMAL} ${BOLD}"portainer.projet-multimedia.com" ${GREEN}${BOLD}pour relancer des services. ${NORMAL}"
 echo ""
