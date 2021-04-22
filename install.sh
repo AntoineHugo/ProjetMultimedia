@@ -31,7 +31,7 @@ IP=$(hostname -I)
 
 #Installatin de docker :
 apt update
-apt install apt-transport-https ca-certificates curl software-properties-common -y
+apt install apt-transport-https ca-certificates gnupg curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
 var1=$( cat /etc/issue )
